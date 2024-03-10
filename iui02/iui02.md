@@ -18,7 +18,7 @@ Rozróżniamy trzy rodzaje chmur:
 **Uwaga:** To już zrobliśmy na zajęciach. 
 * Utwórz konto poprzez link: https://azureforeducation.microsoft.com/devtools
 * Konto należy założyć na adres prywatny np. jank@gmail.com
-* Następnie w procesie rejestracji podajemy email studenta na uczelni z domeny ```tu.kielce.pl```
+* Następnie w procesie w celu weryfikacji podajemy uczelniany adres email np. ```s000000@student.tu.kielce.pl```
 
 ### Uruchom Start free
 * Po założeniu konta należy uruchomić paltformę Azure poprzez przycisk Start free, dostępny na stronie https://azure.microsoft.com/en-in/free/students/
