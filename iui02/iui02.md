@@ -15,7 +15,7 @@ Rozróżniamy trzy rodzaje chmur:
 ## Platforma Azure dla studentów
 
 ### Utwórz konto
-** Uwaga! ** To już zrobliśmy na zajęciach. 
+**Uwaga!** To już zrobliśmy na zajęciach. 
 * Utwórz konto poprzez link: https://azureforeducation.microsoft.com/devtools
 * Konto należy założyć na adres prywatny np. jank@gmail.com
 * Następnie w procesie rejestracji podajemy email studenta na uczelni z domeny ```tu.kielce.pl```
