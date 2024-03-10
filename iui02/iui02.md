@@ -22,7 +22,7 @@ Rozróżniamy trzy rodzaje chmur:
 
 ### Uruchom Start free
 
-![Uruchom za darmo](https://github.com/lukpaw/iui-lectures/blob/main/iui02/img/1_uruchom_za_darmo.jpg "Uruchom za darmo")
+![Uruchom za darmo](https://github.com/lukpaw/iui-lectures/blob/main/iui02/img/1_azure_uruchom_za_darmo.jpg "Uruchom za darmo")
 
 ### Zarejestruj się do platformy 
 **Uwaga:** Nie jest wymagana karta kredytowa.
