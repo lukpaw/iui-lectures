@@ -15,12 +15,13 @@ Rozróżniamy trzy rodzaje chmur:
 ## Platforma Azure dla studentów
 
 ### Utwórz konto
+** Uwaga! ** To już zrobliśmy na zajęciach. 
 * Utwórz konto poprzez link: https://azureforeducation.microsoft.com/devtools
 * Konto należy założyć na adres prywatny np. jank@gmail.com
 * Następnie w procesie rejestracji podajemy email studenta na uczelni z domeny ```tu.kielce.pl```
-* Po założeniu konta należy uruchomić paltformę Azure poprzez przycisk Start free, dostępny na stronie https://azure.microsoft.com/en-in/free/students/
 
 ### Uruchom Start free
+* Po założeniu konta należy uruchomić paltformę Azure poprzez przycisk Start free, dostępny na stronie https://azure.microsoft.com/en-in/free/students/
 
 ![Uruchom za darmo](https://github.com/lukpaw/iui-lectures/blob/main/iui02/img/1_azure_uruchom_za_darmo.jpg "Uruchom za darmo")
 
