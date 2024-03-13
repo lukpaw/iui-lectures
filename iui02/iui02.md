@@ -1,27 +1,46 @@
 ## Chmura obliczeniowa
 
-* Chmura obliczeniowa (ang. cloud computing) – model przetwarzania danych oparty na użytkowaniu usług dostarczonych przez usługodawcę (wewnętrzny dział lub zewnętrzną organizację).
-* Chmura to usługa oferowana przez dane oprogramowanie (oraz konieczną infrastrukturę). Oznacza to eliminację konieczności zakupu licencji czy konieczności instalowania i administracji oprogramowaniem.
-* Konsument płaci za użytkowanie określonej usługi, np. za możliwość korzystania z arkusza kalkulacyjnego. Nie musi dokonywać zakupu sprzętu ani oprogramowania.
-* Zasada działania polega na przeniesieniu całego ciężaru świadczenia usług IT (danych, oprogramowania lub mocy obliczeniowej) na serwer i umożliwienie stałego dostępu poprzez komputery klienckie.
-* (Źródło: https://pl.wikipedia.org/wiki/Chmura_obliczeniowa)
+### Co to jest?
 
-Rozróżniamy trzy rodzaje chmur:
-* prywatne (ang. private cloud), będące częścią organizacji, aczkolwiek jednocześnie autonomicznym dostawcą usługi
-* publiczne (ang. public cloud), będące zewnętrznym, ogólnie dostępnym dostawcą (np. Amazon Web Services, Google Cloud Platform, Microsoft Azure itp.)
-* hybrydowe (ang. hybrid), będące połączeniem zasad funkcjonowania chmury prywatnej i publicznej. Pewna część aplikacji i infrastruktury danego klienta pracuje w chmurze prywatnej, a część jest umiejscowiona w przestrzeni chmury publicznej.
-* (Źródło: https://pl.wikipedia.org/wiki/Chmura_obliczeniowa)
+Chmura obliczeniowa (ang. cloud computing) to model udostępniania zasobów IT (np. serwerów, pamięci masowej, oprogramowania) przez Internet na żądanie. Użytkownicy mogą korzystać z tych zasobów bez konieczności ich posiadania i zarządzania nimi.
+
+### Korzyści
+
+* **Elastyczność:** Możliwość szybkiego skalowania zasobów w zależności od potrzeb.
+* **Oszczędność:** Brak konieczności inwestowania w infrastrukturę IT.
+* **Dostępność:** Możliwość dostępu do danych i aplikacji z dowolnego miejsca i urządzenia.
+* **Bezpieczeństwo:** Dostawcy chmury dbają o bezpieczeństwo danych i infrastruktury.
+
+### Rodzaje chmur
+
+* **Chmura prywatna** (ang. private cloud) jest dedykowana dla jednego użytkownika, np. firmy. Jest ona zbudowana i zarządzana przez tę firmę lub zewnętrznego dostawcę.
+
+* **Chmura publiczna** (ang. public cloud) jest udostępniana przez zewnętrznego dostawcę i dostępna dla wielu użytkowników. Jest to rodzaj chmury, w której użytkownik ma mniejszą kontrolę nad infrastrukturą.
+
+* **Chmura hybrydowa** (ang. hybrid cloud) to połączenie chmury prywatnej i publicznej. Pozwala to na wykorzystanie zalet obu rodzajów chmur, np. elastyczności chmury publicznej i bezpieczeństwa chmury prywatnej.
+
+### Przykładowe zastosowania
+
+* Przechowywanie danych
+* Uruchamianie aplikacji
+* Rozwijanie sztucznej inteligencji
+* Korzystanie z gotowych usług na platformie
+
+## Opis pojęć związanych z chmurą na przykładzie Microsoft Azure
+https://learn.microsoft.com/pl-pl/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/
 
 ## Platforma Azure dla studentów
 
 ### Utwórz konto
-**Uwaga:** To już zrobliśmy na zajęciach. 
+(Procedura dostępna na stronie jest już nieaktulana: https://student.tu.kielce.pl/wordpress/?page_id=186)
+
+**Uwaga:** Poniższe trzy punkty zrobliśmy na zajęciach. 
 * Utwórz konto poprzez link: https://azureforeducation.microsoft.com/devtools
 * Konto należy założyć na adres prywatny np. jank@gmail.com
 * Następnie w procesie w celu weryfikacji podajemy uczelniany adres email np. ```s000000@student.tu.kielce.pl```
 
 ### Uruchom Start free
-* Po założeniu konta należy uruchomić paltformę Azure poprzez przycisk Start free, dostępny na stronie https://azure.microsoft.com/en-in/free/students/
+* Po założeniu konta należy uruchomić platformę Azure poprzez przycisk Start free, dostępny na stronie https://azure.microsoft.com/en-in/free/students/
 
 ![Uruchom za darmo](https://github.com/lukpaw/iui-lectures/blob/main/iui02/img/1_azure_uruchom_za_darmo.jpg "Uruchom za darmo")
 
@@ -57,3 +76,13 @@ Rozróżniamy trzy rodzaje chmur:
 ### Zasób mowa
 
 ![Oferta dla ucznia](https://github.com/lukpaw/iui-lectures/blob/main/iui02/img/9_azure_zasob_mowa.jpg "Zasób mowa")
+
+## Opis podstawowych składników architektury platformy Azure
+https://learn.microsoft.com/pl-pl/training/modules/describe-core-architectural-components-of-azure/
+
+## Analizowanie tekstu przy użyciu języka AI platformy Azure
+
+Przykład użycia inteligentnej usługi Analizy Tekstu stworznej jako zasób na plafromie Microsoft Azure 
+
+https://learn.microsoft.com/pl-pl/training/modules/analyze-text-ai-language/
+https://github.com/MicrosoftLearning/mslearn-ai-language
