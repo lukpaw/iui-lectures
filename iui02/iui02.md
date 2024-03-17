@@ -82,7 +82,19 @@ https://learn.microsoft.com/pl-pl/training/modules/describe-core-architectural-c
 
 ## Analizowanie tekstu przy użyciu języka AI platformy Azure
 
-Przykład użycia inteligentnej usługi Analizy Tekstu stworznej jako zasób na plafromie Microsoft Azure 
+Przykład użycia inteligentnej usługi: Analiza tekstu
 
 https://learn.microsoft.com/pl-pl/training/modules/analyze-text-ai-language/
 https://github.com/MicrosoftLearning/mslearn-ai-language
+
+## Podstawy odpowiadania na pytania za pomocą usługi językowej
+
+Przykład użycia kolejnej inteligentnej usługi: Odpowiadanie na pytania 
+
+https://learn.microsoft.com/pl-pl/training/modules/build-faq-chatbot-qna-maker-azure-bot-service/
+
+## Podstawy interpretacji języka konwersacyjnego
+
+Przykład użycia kolejnej inteligentnej usługi: Interpretacja języka konwersacyjnego
+
+https://learn.microsoft.com/pl-pl/training/modules/create-language-model-with-language-understanding/
