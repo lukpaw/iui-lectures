@@ -82,7 +82,13 @@ https://learn.microsoft.com/pl-pl/training/modules/describe-core-architectural-c
 
 ## Przykłady użycia inteligentnych usług platformy Azure
 
+Wzorcowe pliki laboratoryjne dla modułów języka AI platformy Azure dla Python i C#:
+
 https://github.com/MicrosoftLearning/mslearn-ai-language
+
+Uzupełnione pliki laboratoryjne dla modułów języka AI platformy Azure dla Pythona:
+
+https://github.com/lukpaw/mslearn-ai-language
 
 ### Analizowanie tekstu przy użyciu języka AI platformy Azure
 
