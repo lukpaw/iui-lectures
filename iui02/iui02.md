@@ -80,21 +80,18 @@ https://learn.microsoft.com/pl-pl/training/paths/microsoft-azure-fundamentals-de
 ## Opis podstawowych składników architektury platformy Azure
 https://learn.microsoft.com/pl-pl/training/modules/describe-core-architectural-components-of-azure/
 
-## Analizowanie tekstu przy użyciu języka AI platformy Azure
+## Przykłady użycia inteligentnych usług platformy Azure
 
-Przykład użycia inteligentnej usługi: Analiza tekstu
-
-https://learn.microsoft.com/pl-pl/training/modules/analyze-text-ai-language/
 https://github.com/MicrosoftLearning/mslearn-ai-language
 
-## Podstawy odpowiadania na pytania za pomocą usługi językowej
+### Analizowanie tekstu przy użyciu języka AI platformy Azure
 
-Przykład użycia kolejnej inteligentnej usługi: Odpowiadanie na pytania 
+https://learn.microsoft.com/pl-pl/training/modules/analyze-text-ai-language/
+
+### Podstawy odpowiadanie na pytania za pomocą usługi językowej
 
 https://learn.microsoft.com/pl-pl/training/modules/build-faq-chatbot-qna-maker-azure-bot-service/
 
-## Podstawy interpretacji języka konwersacyjnego
-
-Przykład użycia kolejnej inteligentnej usługi: Interpretacja języka konwersacyjnego
+### Podstawy interpretacji języka konwersacyjnego
 
 https://learn.microsoft.com/pl-pl/training/modules/create-language-model-with-language-understanding/
