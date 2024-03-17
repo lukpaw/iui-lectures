@@ -15,4 +15,4 @@
 * **5. Orkiestracja usług sieciowych na przykładzie platformy chmurowej**
     * Prezentacja: [./iui05/iui05.md](https://github.com/lukpaw/iui-lectures/blob/main/iui05/iui05.md)
 
-&copy; 2024 dr inż. Łukasz Pawlik, Kielce University of Technology
+&copy; 2024 Łukasz Pawlik
