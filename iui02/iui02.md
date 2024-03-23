@@ -32,7 +32,7 @@ https://learn.microsoft.com/pl-pl/training/paths/microsoft-azure-fundamentals-de
 ## Platforma Azure dla studentów
 
 ### Utwórz konto
-(Procedura dostępna na stronie jest już nieaktulana: https://student.tu.kielce.pl/wordpress/?page_id=186)
+(Procedura dostępna na stronie jest już nieaktualna: https://student.tu.kielce.pl/wordpress/?page_id=186)
 
 **Uwaga:** Poniższe trzy punkty zrobliśmy na zajęciach. 
 * Utwórz konto poprzez link: https://azureforeducation.microsoft.com/devtools
