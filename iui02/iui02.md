@@ -77,6 +77,10 @@ https://learn.microsoft.com/pl-pl/training/paths/microsoft-azure-fundamentals-de
 
 ![Oferta dla ucznia](https://github.com/lukpaw/iui-lectures/blob/main/iui02/img/9_azure_zasob_mowa.jpg "Zasób mowa")
 
+### Zasób analiza tekstu
+
+![Oferta dla ucznia](https://github.com/lukpaw/iui-lectures/blob/main/iui02/img/10_azure_analiza_tekstu.jpg "Zasób analiza tekstu")
+
 ## Opis podstawowych składników architektury platformy Azure
 https://learn.microsoft.com/pl-pl/training/modules/describe-core-architectural-components-of-azure/
 
