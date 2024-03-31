@@ -7,6 +7,8 @@
 * Git
 * Zainstaluj Java 17 (Windows 10 x64 Java Development Kit): https://jdk.java.net/java-se-ri/17
 * IDE IDEA IntelliJ (lub inny IDE)
+* Zapoznaj się z dokumentacją SpringBoot:
+  * https://spring.io/guides/gs/rest-service
 
 ## Tworzenie mikroserwisów jako aplikacji SpringBoot
 * Przy tworzeniu od początku projektu można skorzystać z: https://start.spring.io/
