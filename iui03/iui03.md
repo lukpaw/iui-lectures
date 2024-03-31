@@ -19,7 +19,6 @@
 
 ## Aplikacje internetowe typu SPA na przykładzie Angular
 
-# Zajnstaluj:
 * Zainstaluj NodeJS: https://nodejs.org/en/download/
 * Sprawdź w wierszu poleceń: `node --version`
 * W wierszu poleceń uruchom komendę: npm install -g @angular/cli
