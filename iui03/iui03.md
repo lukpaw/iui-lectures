@@ -39,6 +39,10 @@
     npm install
     ng serve
     ```
+    Jeżeli mamy plik `proxy.conf.json` to startujemy w ten sposób:
+    ```
+    npm start
+    ```
 * Gdy chcesz dodać nowy komponent do Angulara uruchom: `ng generate component [nazwa_komponentu]`
 
 ## Uruchomienie i dokładne omówienie aplikacji
