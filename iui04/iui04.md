@@ -1,7 +1,6 @@
 ## Usługa tożsamości na przykładzie Microsoft Entra
 
 https://learn.microsoft.com/pl-pl/entra/identity-platform/
-https://learn.microsoft.com/pl-pl/entra/identity-platform/index-spa
 
 ## Centrum administracyjne Microsoft Entra
 https://entra.microsoft.com/
