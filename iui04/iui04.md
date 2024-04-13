@@ -1,5 +1,4 @@
 ## Usługa tożsamości na przykładzie Microsoft Entra
-
 https://learn.microsoft.com/pl-pl/entra/identity-platform/
 
 ## Centrum administracyjne Microsoft Entra
@@ -16,7 +15,7 @@ Najważniejsze elementy:
 ## Utwórz nowego użytkownika
 ![Nowy użytkownik](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/2_entra_utworz_uzytkownika.jpg "Nowy użytkownik")
 
-# Szybki start: Aplikacja jednostronicowa Angular
+## Aplikacja jednostronicowa Angular
 Aplikacja działająca w przeglądarce
 ![Szybki start](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/3_entra_szybki_start.jpg "Szybki start")
 
