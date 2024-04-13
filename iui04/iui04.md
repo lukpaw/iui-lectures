@@ -15,7 +15,7 @@ Najważniejsze elementy:
 ## Utwórz nowego użytkownika
 ![Nowy użytkownik](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/2_entra_utworz_uzytkownika.jpg "Nowy użytkownik")
 
-## Aplikacja jednostronicowa Angular
+## Zabezpieczenie aplikacji Angular z użyciem Microsoft Entra
 Aplikacja działająca w przeglądarce
 ![Szybki start](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/3_entra_szybki_start.jpg "Szybki start")
 
