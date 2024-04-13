@@ -48,4 +48,4 @@ https://www.keycloak.org/
 https://hamdi-bouallague.medium.com/secure-your-angular-spring-boot-application-using-keycloak-891efab50db8
 
 ## Materiały OAuth 2.0 i OpenID Connect
-"Wprowadzenie do OAuth 2.0 i OpenID Connect", Aleksander Żelazny https://youtu.be/9LRZXg0NK5k?si=qgApHsB8QygHGoZK
+https://youtu.be/9LRZXg0NK5k?si=qgApHsB8QygHGoZK
