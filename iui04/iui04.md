@@ -13,13 +13,13 @@ Najważniejsze elementy:
 * Aplikacje
 
 ## Rejestracja aplikacji
-![Rejestruj](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/1_entra_rejestruj "Rejestruj")
+![Rejestruj](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/1_entra_rejestruj.jpg "Rejestruj")
 
 ## Utwórz nowego użytkownika
-![Nowy użytkownik](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/2_springboot_starter_translator.jpg "Nowy użytkownik")
+![Nowy użytkownik](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/2_entra_utworz_uzytkownika.jpg "Nowy użytkownik")
 
 # Szybki start
-![Szybki start](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/2_entra_szybki_start.jpg "Szybki start")
+![Szybki start](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/3_entra_szybki_start.jpg "Szybki start")
 
 ## Nowy branch entra-auth aplikacji iui-tourist-portal 
 https://github.com/lukpaw/iui-tourist-portal/tree/entra-auth
