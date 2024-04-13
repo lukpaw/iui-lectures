@@ -24,11 +24,12 @@ Aplikacja działająca w przeglądarce
 https://github.com/lukpaw/iui-tourist-portal/tree/entra-auth
 
 ## Zmień clientId
-Pobierz z zarejestrowanej aplikacji clientId
-![Zmien clientId](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/4_entra_zmien_client_id.jpg "Zmien clientId")
+Pobierz z zarejestrowanej aplikacji clientId.
+Klient w kontekście client-id i client-secret to aplikacja frontend lub backend. 
+![Zmień clientId](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/4_entra_zmien_client_id.jpg "Zmień clientId")
 
 ## Dodaj klucz tajny klienta
-Dodaj klucz tajny klienta (klientem jest aplikacja)
+Klucz tajny klienta jest potrzebny dla aplikacji backend.
 ![odaj klucz tajny klienta](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/5_entra_zmien_client_secret.jpg "Dodaj klucz tajny klienta")
 
 ```yaml
