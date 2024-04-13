@@ -2,9 +2,8 @@
 
 https://learn.microsoft.com/pl-pl/entra/identity-platform/
 https://learn.microsoft.com/pl-pl/entra/identity-platform/index-spa
-https://learn.microsoft.com/pl-pl/entra/identity-platform/quickstart-web-app-java-sign-in
 
-## Centrum adminsitracyjne Microsoft Entra
+## Centrum administracyjne Microsoft Entra
 https://entra.microsoft.com/
 
 Najważniejsze elementy:
@@ -18,12 +17,41 @@ Najważniejsze elementy:
 ## Utwórz nowego użytkownika
 ![Nowy użytkownik](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/2_entra_utworz_uzytkownika.jpg "Nowy użytkownik")
 
-# Szybki start
+# Szybki start: Aplikacja jednostronicowa Angular
+Aplikacja działająca w przeglądarce
 ![Szybki start](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/3_entra_szybki_start.jpg "Szybki start")
 
 ## Nowy branch entra-auth aplikacji iui-tourist-portal 
 https://github.com/lukpaw/iui-tourist-portal/tree/entra-auth
 
-## Zmien clientId
-Pobierze z zarejestrowanej aplikacji
+## Zmień clientId
+Pobierz z zarejestrowanej aplikacji clientId
 ![Zmien clientId](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/4_entra_zmien_client_id.jpg "Zmien clientId")
+
+## Dodaj klucz tajny klienta
+Dodaj klucz tajny klienta (klientem jest aplikacja)
+![odaj klucz tajny klienta](https://github.com/lukpaw/iui-lectures/blob/main/iui04/img/5_entra_zmien_client_secret.jpg "Dodaj klucz tajny klienta")
+
+```yaml
+spring:
+  cloud:
+    azure:
+      active-directory:
+        enabled: true
+        profile:
+          tenant-id: <tenant>
+        credential:
+          client-id: ${AZURE_CLIENT_ID}
+          client-secret: ${AZURE_CLIENT_SECRET}
+```
+## Obsługa Spring Cloud Azure dla Spring Security
+https://learn.microsoft.com/en-us/azure/developer/java/spring-framework/spring-security-support
+
+## Inne rozwiązania Identity and Access Management
+https://www.keycloak.org/
+
+## Zabezpieczenie aplikacji Angular / Spring boot z użyciem Keycloak
+https://hamdi-bouallague.medium.com/secure-your-angular-spring-boot-application-using-keycloak-891efab50db8
+
+## Materiały OAuth 2.0 i OpenID Connect
+"Wprowadzenie do OAuth 2.0 i OpenID Connect", Aleksander Żelazny https://youtu.be/9LRZXg0NK5k?si=qgApHsB8QygHGoZK
