@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/bpmn/20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.omg.org/bpmn/20 http://www.omg.org/bpmn/20/BPMN20.xsd">
+
+    <bpmn2:process id="process_skladanieZamowienia" name="Proces składania zamówienia">
+
+        <bpmn2:startEvent id="event_zlozenieZamowienia" name="Złożenie zamówienia przez klienta"/>
+
+        <bpmn2:userTask id="task_weryfikacjaZamowienia" name="Weryfikacja zamówienia przez system">
+            <bpmn2:extensionElements>
+                <bpmn2:assignedUser>
+                    <bpmn2:humanTaskResource id="resource_systemSklepu" name="System sklepu internetowego"/>
+                </bpmn2:assignedUser>
+            </bpmn2:extensionElements>
+        </bpmn2:userTask>
+
+        <bpmn2:sequenceFlow id="flow_weryfikacjaDoUtworzenia" from="event_zlozenieZamowienia"
+                            to="task_weryfikacjaZamowienia"/>
+
+        <bpmn2:serviceTask id="task_utworzZamowienie" name="Utworzenie zamówienia w mikrousłudze">
+            <bpmn2:ioOperation id="io_utworzZamowienie" name="Utwórz zamówienie">
+                <bpmn2:inMessage id="message_zamowienie" itemRef="item_zamowienie"/>
+            </bpmn2:ioOperation>
+            <bpmn2:extensionElements>
+                <bpmn2:implementation>
+                    <bpmn2:serviceImplementation class="com.example.microservice.ZamowieniaService"
+                                                 method="utworzZamowienie"/>
+                </bpmn2:implementation>
+            </bpmn2:extensionElements>
+        </bpmn2:serviceTask>
+
+        <bpmn2:sequenceFlow id="flow_weryfikacjaDoUtworzenia" from="task_weryfikacjaZamowienia"
+                            to="task_utworzZamowienie"/>
+
+        <bpmn2:sequenceFlow id="flow_utworzenieDoSprawdzenia" from="task_utworzZamowienie" to="task_sprawdzDostepnosc"/>
+
+        <bpmn2:serviceTask id="task_sprawdzDostepnosc" name="Sprawdzanie dostępności produktów">
+            <bpmn2:ioOperation id="io_sprawdzDostepnosc" name="Sprawdź dostępność">
+                <bpmn2:inMessage id="message_zamowienie" itemRef="item_zamowienie"/>
+                <bpmn2:outMessage id="message_dostepnosc" itemRef="item_dostepnosc"/>
+            </bpmn2:ioOperation>
+            <bpmn2:extensionElements>
+                <bpmn2:implementation>
+                    <bpmn2:serviceImplementation class="com.example.microservice.MagazynService"
+                                                 method="sprawdzDostepnosc"/>
+                </bpmn2:implementation>
+            </bpmn2:extensionElements>
+        </bpmn2:serviceTask>
+
+        <bpmn2:sequenceFlow id="flow_sprawdzenieDoRezerwacji" from="task_sprawdzDostepnosc" to="task_rezerwujProdukty">
+            <bpmn2:conditionalExpression type="bpmn2:Script">
+                <bpmn2:script>
+                    <bpmn2:scriptLanguage>javascript</bpmn2:scriptLanguage>
+                    <bpmn2:scriptBody>
+                        if (message_dostepnosc.dostepne) {
+                        return true;
+                        } else {
+                        return false;
+                        }
+                    </bpmn2:scriptBody>
+                </bpmn2:script>
+            </bpmn2:conditionalExpression>
+        </bpmn2:sequenceFlow>
+
+        <bpmn2:userTask id="task_informujONiedostepnosci" name="Informowanie klienta o braku produktów">
+            <bpmn2:extensionElements>
+                <bpmn2:assignedUser>
+                    <bpmn2:humanTaskResource id="resource_obslugaKlienta" name="Obsługa klienta"/>
+                </bpmn2:assignedUser>
+            </bpmn2:extensionElements>
+        </bpmn2:userTask>
+
+        <bpmn2:sequenceFlow id="flow_sprawdzenieDoInformowania" from="task_sprawdzDostepnosc"
+                            to="task_informujONiedostepnosci">
+            <bpmn2:conditionalExpression type="bpmn2:Script">
+                <bpmn2:script>
+                    <bpmn2:scriptLanguage>javascript</bpmn2:scriptLanguage>
+                    <bpmn2:scriptBody>
+                        if (!message_dostepnosc.dostepne) {
+                        return true;
+                        } else {
+                        return false;
+                        }
+                    </bpmn2:scriptBody>
+                </bpmn2:script>
+            </bpmn2:conditionalExpression>
+        </bpmn2:sequenceFlow>
+
+        <bpmn2:sequenceFlow id="flow_informowanieDoZamkniecia" from="task_informujONiedostepnosci"
+                            to="event_zamknijProces"/>
+
+        <bpmn2:serviceTask id="task_rezerwujProdukty" name="Rezerwacja produktów">
+            <bpmn2:ioOperation id="io_rezerwujProdukty" name="Rezerwuj produkty">
+                <bpmn2:inMessage id="message_zamowienie" itemRef="item_zamowienie"/>
+            </bpmn2:ioOperation>
+            <bpmn2:extensionElements>
+                <bpmn2:implementation>
+                    <bpmn2:serviceImplementation class="com.example.microservice.MagazynService"
+                                                 method="rezerwujProdukty"/>
+                </bpmn2:implementation>
+            </bpmn2:extensionElements>
+        </bpmn2:serviceTask>
+
+        <bpmn2:sequenceFlow id="flow_sprawdzenieDoRezerwacji" from="task_sprawdzDostepnosc" to="task_rezerwujProdukty"/>
+
+        <bpmn2:serviceTask id="task_przygotujDoWysylki" name="Przygotowanie produktów do wysyłki">
+            <bpmn2:ioOperation id="io_przygotujDoWysylki" name="Przygotuj do wysyłki">
+                <bpmn2:inMessage id="message_zamowienie" itemRef="item_zamowienie"/>
+            </bpmn2:ioOperation>
+            <bpmn2:extensionElements>
+                <bpmn2:implementation>
+                    <bpmn2:serviceImplementation class="com.example.microservice.MagazynService"
+                                                 method="przygotujDoWysylki"/>
+                </bpmn2:implementation>
+            </bpmn2:extensionElements>
+        </bpmn2:serviceTask>
+
+        <bpmn2:sequenceFlow id="flow_rezerwacjaDoPrzygotowania" from="task_rezerwujProdukty"
+                            to="task_przygotujDoWysylki"/>
+
+        <bpmn2:serviceTask id="task_wyslijZamowienie" name="Wysyłka zamówienia">
+            <bpmn2:ioOperation id="io_wyslijZamowienie" name="Wyślij zamówienie">
+                <bpmn2:inMessage id="message_zamowienie" itemRef="item_zamowienie"/>
+            </bpmn2:ioOperation>
+            <bpmn2:extensionElements>
+                <bpmn2:implementation>
+                    <bpmn2:serviceImplementation class="com.example.microservice.WysylkaService"
+                                                 method="wyslijZamowienie"/>
+                </bpmn2:implementation>
+            </bpmn2:extensionElements>
+        </bpmn2:serviceTask>
+
+        <bpmn2:sequenceFlow id="flow_przygotowanieDoWysylki" from="task_przygotujDoWysylki" to="task_wyslijZamowienie"/>
+
+        <bpmn2:serviceTask id="task_zaktualizujStatus" name="Aktualizacja statusu zamówienia">
+            <bpmn2:ioOperation id="io_zaktualizujStatus" name="Zaktualizuj status">
+                <bpmn2:inMessage id="message_zamowienie" itemRef="item_zamowienie"/>
+            </bpmn2:ioOperation>
+            <bpmn2:extensionElements>
+                <bpmn2:implementation>
+                    <bpmn2:serviceImplementation class="com.example.microservice.ZamowieniaService"
+                                                 method="zaktualizujStatus"/>
+                </bpmn2:implementation>
+            </bpmn2:extensionElements>
+        </bpmn2:serviceTask>
+
+        <bpmn2:sequenceFlow id="flow_wysylkaDoAktualizacji" from="task_wyslijZamowienie" to="task_zaktualizujStatus"/>
+
+        <bpmn2:userTask id="task_informujOWysylce" name="Informowanie klienta o wysłaniu zamówienia">
+            <bpmn2:extensionElements>
+                <bpmn2:assignedUser>
+                    <bpmn2:humanTaskResource id="resource_obslugaKlienta" name="Obsługa klienta"/>
+                </bpmn2:assignedUser>
+            </bpmn2:extensionElements>
+        </bpmn2:userTask>
+
+        <bpmn2:sequenceFlow id="flow_aktualizacjaDoInformowania" from="task_zaktualizujStatus"
+                            to="task_informujOWysylce"/>
+
+        <bpmn2:endEvent id="event_zamknijProces" name="Zamknięcie procesu"/>
+
+        <bpmn2:sequenceFlow id="flow_informowanieDoZamkniecia" from="task_informujOWysylce" to="event_zamknijProces"/>
+
+    </bpmn2:process>
+
+    <bpmn2:itemDefinition id="item_zamowienie" structureRef="tns:Zamowienie"/>
+
+    <bpmn2:message id="message_zamowienie" itemRef="item_zamowienie"/>
+
+    <bpmn2:message id="message_dostepnosc">
+        <bpmn2:itemRef id="item_dostepnosc" structureRef="tns:Dostepnosc"/>
+    </bpmn2:message>
+
+    <bpmn2:schema xmlns:tns="http://www.example.com/zamowienia" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.example.com/zamowienia zamowienia.xsd">
+
+        <bpmn2:complexType id="tns:Zamowienie">
+            <bpmn2:sequence>
+                <bpmn2:element name="id" type="xsd:string"/>
+                <bpmn2:element name="produkty" type="tns:Produkty"/>
+                <bpmn2:element name="adresDostawy" type="tns:Adres"/>
+                <bpmn2:element name="danePłatnicze" type="tns:DanePłatnicze"/>
+            </bpmn2:sequence>
+        </bpmn2:complexType>
+
+        <bpmn2:complexType id="tns:Produkty">
+            <bpmn2:sequence>
+                <bpmn2:element name="produkt" type="tns:Produkt" maxOccurs="unbounded"/>
+            </bpmn2:sequence>
+        </bpmn2:complexType>
+
+        <bpmn2:complexType id="tns:Produkt">
+            <bpmn2:sequence>
+                <bpmn2:element name="id" type="xsd:string"/>
+                <bpmn2:element name="nazwa" type="xsd:string"/>
+                <bpmn2:element name="ilosc" type="xsd:int"/>
+            </bpmn2:sequence>
+        </bpmn2:complexType>
+
+        <bpmn2:complexType id="tns:Adres">
+            <bpmn2:sequence>
+                <bpmn2:element name="ulica" type="xsd:string"/>
+                <bpmn2:element name="kodPocztowy" type="xsd:string"/>
+                <bpmn2:element name="miasto" type="xsd:string"/>
+                <bpmn2:element name="kraj" type="xsd:string"/>
+            </bpmn2:sequence>
+        </bpmn2:complexType>
+
+        <bpmn2:complexType id="tns:DanePłatnicze">
+            <bpmn2:sequence>
+                <bpmn2:element name="metodaPłatności" type="xsd:string"/>
+                <bpmn2:element name="numerKarty" type="xsd:string"/>
+                <bpmn2:element name="dataWażności" type="xsd:date"/>
+                <bpmn2:element name="cvv" type="xsd:int"/>
+            </bpmn2:sequence>
+        </bpmn2:complexType>
+
+        <bpmn2:complexType id="tns:Dostepnosc">
+            <bpmn2:sequence>
+                <bpmn2:element name="produktyDostepne" type="xsd:boolean"/>
+            </bpmn2:sequence>
+        </bpmn2:complexType>
+
+    </bpmn2:schema>
+
+</bpmn2:definitions>
