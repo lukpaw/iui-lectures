@@ -236,3 +236,71 @@ Rozmowa Chitchat zajmie się typowymi uprzejmościami i pozdrowieniami ze statyc
 Wywoływanie Orchestratora przy użyciu zestawu Azure SDK w środowisku Python:
 
 https://github.com/lukpaw/mslearn-ai-language/tree/main/Labfiles/09-orchestration/Python
+
+```python
+           # Send analysis request and get response
+            response = client.analyze_conversation(data)
+
+            if isinstance(response, dict):
+                result = response
+            else:
+                raise Exception("Unexpected response format")
+
+            # Extract top intent and orchestration prediction
+            conversational_task_result = result["result"]
+            orchestration_prediction = conversational_task_result["prediction"]
+            top_intent = orchestration_prediction["topIntent"]
+
+            print(f"The top intent was {top_intent}\n")
+            print(f"The result from the connected project is as follows:\n")
+
+            # Handle Conversation language understanding response
+            if orchestration_prediction["intents"][top_intent]["targetProjectKind"] == "Conversation":
+                # ...
+            # Handle Custom question answering response
+            elif orchestration_prediction["intents"][top_intent]["targetProjectKind"] == "QuestionAnswering":
+                # ...   
+            else:
+                # Handle the case where intents or top_intent is invalid
+                print(f"Warning: 'intents' or '{top_intent}' not found in orchestration_prediction")            
+```
+
+Przykład użycia programu i wyniki:
+```text
+Input a query to your orchestration project (or 'quit' to exit): reading e-mails from matt
+The top intent was EmailIntent
+
+The result from the connected project is as follows:
+
+	Top Intent: Read
+	Intents:
+		Category: Read
+		Confidence: 0.84014285
+
+		Category: Delete
+		Confidence: 0.37129658
+
+		Category: Attach
+		Confidence: 0.20048535
+
+		Category: None
+		Confidence: 0
+
+	Entities:
+		Category: Sender
+		Text: matt
+		Offset: 21
+		Length: 4
+		Confidence: 1
+
+Input a query to your orchestration project (or 'quit' to exit): hello how are you
+The top intent was ChitchatIntent
+
+The result from the connected project is as follows:
+
+	Answers: 
+
+		Great, thanks.
+		Confidence: 0.9129999999999999
+		Source: qna_chitchat_Professional
+```
