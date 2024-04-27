@@ -125,6 +125,7 @@ Wyobraźmy sobie proces składania zamówienia w sklepie internetowym. Proces te
 9. Mikrousługa zarządzania zamówieniami aktualizuje status zamówienia na "wysłane".
 
 **Przykładowy kod BPMN w XML dla procesu składania zamówienia w sklepie internetowym**
+[Example](https://github.com/lukpaw/iui-lectures/blob/main/iui05/bpmn.xml)
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn2:definitions xmlns:bpmn2="http://www.omg.org/bpmn/20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
