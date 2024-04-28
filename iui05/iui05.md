@@ -1,4 +1,4 @@
-## Tradycyjna komunikacja, a orkiestracja usług sieciowych
+## Tradycyjna komunikacja synchroniczna, a komunikacja asynchroniczna
 
 **Problem:**
 
