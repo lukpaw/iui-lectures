@@ -14,5 +14,8 @@
 
 * **5. Orkiestracja usług sieciowych na przykładzie platformy chmurowej**
     * Prezentacja: [./iui05/iui05.md](https://github.com/lukpaw/iui-lectures/blob/main/iui05/iui05.md)
+  
+* **6. Sieci semantyczne**
+    * Prezentacja: [./iui06/iui06.md](https://github.com/lukpaw/iui-lectures/blob/main/iui06/iui06.md)
 
 &copy; 2024 Łukasz Pawlik
