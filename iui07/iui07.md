@@ -1,5 +1,67 @@
 ## Praktyczne zastosowanie usług w Chmurze (cz. 1)
 Praktyczne zastosowanie usług w Chmurze na przykładzie Azure AI Health Bot
+Źródło: https://learn.microsoft.com/en-us/azure/health-bot/overview
+
+## Microsoft Azure Health Bot - rewolucja w opiece zdrowotnej
+
+* Innowacyjna platforma oparta na sztucznej inteligencji
+    * Wykorzystuje najnowocześniejsze technologie AI do ułatwiania komunikacji i opieki nad pacjentami.
+    * Pomaga w diagnozowaniu chorób, udzielaniu porad i kierowaniu do odpowiednich specjalistów.
+* Zwiększona satysfakcja pacjentów
+    * Ułatwia dostęp do informacji i wsparcia 24/7.
+    * Pozwala na spersonalizowane podejście do każdego pacjenta.
+    * Zmniejsza czas oczekiwania na wizyty lekarskie i badania.
+* Poprawa efektywności pracowników służby zdrowia
+    * Automatyzuje powtarzalne zadania, takie jak odpowiadanie na pytania i umawianie wizyt.
+    * Zapewnia dostęp do aktualnych informacji i danych medycznych pacjentów.
+    * Pozwala lekarzom skupić się na bardziej skomplikowanych przypadkach.
+
+## Jak działa Health Bot?
+
+* Przetwarzanie języka naturalnego (NLP)
+    * Rozumie naturalny język ludzki i odpowiada w sposób naturalny.
+    * Potrafi rozpoznawać intencje pacjentów i udzielać odpowiednich informacji.
+    * Umożliwia pacjentom łatwą i intuicyjną interakcję z botem.
+* Spersonalizowane informacje i zalecenia
+    * Dostarcza pacjentom informacji dostosowanych do ich indywidualnych potrzeb i stanu zdrowia.
+    * Wykorzystuje dane medyczne pacjentów do tworzenia spersonalizowanych planów opieki.
+    * Pomaga pacjentom podejmować świadome decyzje dotyczące swojego zdrowia.
+* Integracja z systemami EHR
+    * Łączy się z istniejącymi systemami EHR, aby uzyskać dostęp do danych medycznych pacjentów.
+    * Pozwala na całościowy obraz stanu zdrowia pacjenta.
+    * Ułatwia pracownikom służby zdrowia świadczenie kompleksowej opieki.
+
+## Korzyści ze stosowania Health Bot
+
+* Poprawa satysfakcji pacjentów
+    * Ułatwia dostęp do informacji i wsparcia 24/7.
+    * Pozwala na spersonalizowane podejście do każdego pacjenta.
+    * Zmniejsza czas oczekiwania na wizyty lekarskie i badania.
+    * Zwiększa zaufanie pacjentów do opieki medycznej.
+* Zwiększenie efektywności pracowników służby zdrowia
+    * Automatyzuje powtarzalne zadania, takie jak odpowiadanie na pytania i umawianie wizyt.
+    * Zapewnia dostęp do aktualnych informacji i danych medycznych pacjentów.
+    * Pozwala lekarzom skupić się na bardziej skomplikowanych przypadkach.
+    * Prowadzi do obniżenia kosztów opieki zdrowotnej.
+* Obniżenie kosztów opieki zdrowotnej
+    * Zmniejsza liczbę niepotrzebnych wizyt u lekarza i badań.
+    * Pomaga pacjentom lepiej zarządzać swoim zdrowiem, co może prowadzić do zmniejszenia liczby chorób przewlekłych.
+    * Umożliwia bardziej wydajne wykorzystanie zasobów opieki zdrowotnej.
+
+## Przypadki użycia Health Bot
+
+* Odpowiadanie na pytania dotyczące zdrowia
+    * Health Bot może odpowiadać na szeroki zakres pytań dotyczących zdrowia, od objawów chorób po sposoby leczenia.
+    * Może również udzielać informacji o zdrowym stylu życia i zapobieganiu chorobom.
+* Planowanie wizyt lekarskich
+    * Health Bot może pomóc pacjentom w planowaniu wizyt lekarskich, w tym w wyszukiwaniu lekarzy, ustalaniu terminów i przypominaniu o wizytach.
+    * Może również udzielać informacji o tym, czego można się spodziewać podczas wizyty.
+* Uzupełnianie recept
+    * Health Bot może pomóc pacjentom w uzupełnianiu recept, w tym w wyszukiwaniu aptek, sprawdzaniu cen leków i składaniu zamówień online.
+    * Może również przypominać pacjentom o przyjmowaniu leków.
+* Monitorowanie stanu zdrowia pacjentów
+    * Health Bot może monitorować stan zdrowia pacjentów, śledząc ich objawy, znaki życiowe i inne dane.
+    * Może również ostrzegać pracowników służ
 
 ## Azure AI Health Bot
 https://learn.microsoft.com/en-us/azure/health-bot/quickstart-createyourfirstscenario
@@ -72,3 +134,32 @@ https://learn.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-
 ## Praktyczne zastosowanie Health Bot w programie Python
 https://github.com/lukpaw/mslearn-ai-language/blob/main/Labfiles/10-health-bot/Python/health-bot/health-bot.py
 
+### Program do komunikacji z botem
+
+* Program umożliwia komunikację z botem za pomocą interfejsu DirectLine.
+* DirectLine to usługa firmy Microsoft do tworzenia botów konwersacyjnych.
+* Program wykorzystuje bibliotekę aiohttp do obsługi asynchronicznych żądań HTTP.
+
+### Klasy
+
+* Program definiuje trzy klasy: DirectLineToken, ChatConfig i test_bot.
+* Klasa DirectLineToken przechowuje informacje o tokenie DirectLine.
+* Klasa ChatConfig przechowuje informacje o konfiguracji czatu.
+* Klasa test_bot demonstruje komunikację z botem.
+
+### Funkcje asynchroniczne
+
+* Program definiuje funkcje asynchroniczne:
+    * get_direct_line_token: pobiera token DirectLine.
+    * new_conversation: tworzy nową konwersację z botem.
+    * send_activity: wysyła wiadomość do bota.
+    * get_activities: pobiera wiadomości od bota.
+    * interaction: wysyła i odbiera wiadomości.
+
+### Test bota
+
+* Funkcja test_bot demonstruje komunikację z botem:
+    1. Pobiera token DirectLine.
+    2. Tworzy nową konwersację z botem.
+    3. Wysyła wiadomość do bota.
+    4. Pobiera odpowiedzi od bota i drukuje je na konsoli.
