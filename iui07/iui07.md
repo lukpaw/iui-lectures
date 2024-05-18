@@ -175,7 +175,7 @@ https://learn.microsoft.com/en-us/azure/health-bot/quickstart-createyourfirstsce
 ### Skopiuj "DirectLine secret"
 ![Obraz](https://github.com/lukpaw/iui-lectures/blob/main/iui07/img/17_hbot_direct_line_secret.jpg "Obraz")
 
-## Praktyczne zastosowanie Health Bot w programie Python
+## Program Python zintegrowany z Health Bot
 https://github.com/lukpaw/mslearn-ai-language/blob/main/Labfiles/10-health-bot/Python/health-bot/health-bot.py
 
 ### Program do komunikacji z botem
