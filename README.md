@@ -18,7 +18,10 @@
 * **6. Sieci semantyczne**
     * Prezentacja: [./iui06/iui06.md](https://github.com/lukpaw/iui-lectures/blob/main/iui06/iui06.md)
 
-* **7. Praktyczne zastosowanie usług w Chmurze (cz. 1)**
+* **7. Praktyczne zastosowanie usług w Chmurze**
     * Prezentacja: [./iui07/iui07.md](https://github.com/lukpaw/iui-lectures/blob/main/iui07/iui07.md)
 
+* **8. Zagrożenia związane z systemami inteligentnymi**
+    * Prezentacja: [./iui08/iui08.md](https://github.com/lukpaw/iui-lectures/blob/main/iui08/iui08.md)
+  
 &copy; 2024 Łukasz Pawlik
