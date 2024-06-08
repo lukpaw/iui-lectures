@@ -186,10 +186,9 @@ https://github.com/lukpaw/mslearn-ai-language/blob/main/Labfiles/10-health-bot/P
 
 ### Klasy
 
-* Program definiuje trzy klasy: DirectLineToken, ChatConfig i test_bot.
+* Program definiuje klasy: DirectLineToken i ChatConfig.
 * Klasa DirectLineToken przechowuje informacje o tokenie DirectLine.
 * Klasa ChatConfig przechowuje informacje o konfiguracji czatu.
-* Klasa test_bot demonstruje komunikację z botem.
 
 ### Funkcje asynchroniczne
 
