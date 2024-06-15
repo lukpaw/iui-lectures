@@ -23,5 +23,8 @@
 
 * **8. Zagrożenia związane z systemami inteligentnymi**
     * Prezentacja: [./iui08/iui08.md](https://github.com/lukpaw/iui-lectures/blob/main/iui08/iui08.md)
+
+* **9. Mobilne roboty jako dostawcy usług**
+    * Prezentacja: [./iui09/iui09.md](https://github.com/lukpaw/iui-lectures/blob/main/iui09/iui09.md)
   
 &copy; 2024 Łukasz Pawlik
