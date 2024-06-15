@@ -57,7 +57,7 @@ Wybór odpowiedniej platformy do tworzenia mobilnego robota jest kluczowy dla su
 
 ## Platforma Arduino
 
-![arduino.png](https://github.com/lukpaw/iui-lectures/blob/main/iui08/img/arduino.png "Arduino Uno")
+![arduino.png](https://github.com/lukpaw/iui-lectures/blob/main/iui09/img/arduino.png "Arduino Uno")
 
 Source: https://store-usa.arduino.cc/products/arduino-uno-rev3
 
@@ -131,7 +131,7 @@ Język programowania Arduino oferuje wiele dodatkowych funkcji, które można wy
 
 ## Platforma Raspberry Pi
 
-![raspberry_pi.png](https://github.com/lukpaw/iui-lectures/blob/main/iui08/img/raspberry_pi.png "Raspberry Pi 4 Computer")
+![raspberry_pi.png](https://github.com/lukpaw/iui-lectures/blob/main/iui09/img/raspberry_pi.png "Raspberry Pi 4 Computer")
 
 Source: https://www.amazon.com/Raspberry-Pi-Computer-Suitable-Workstation/dp/B0899VXM8F
 
@@ -201,7 +201,7 @@ Raspberry Pi oferuje wiele dodatkowych funkcji, które można wykorzystać do tw
 
 ## Platforma LEGO Mindstorms
 
-![lego_mindstorm.png.png](https://github.com/lukpaw/iui-lectures/blob/main/iui08/img/lego_mindstorm.png "Raspberry Pi 4 Computer")
+![lego_mindstorm.png.png](https://github.com/lukpaw/iui-lectures/blob/main/iui09/img/lego_mindstorm.png "Raspberry Pi 4 Computer")
 
 Source: https://www.amazon.com/LEGO-MINDSTORMS-31313-Educational-Programming/dp/B00CWER3XY?th=1
 
